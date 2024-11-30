@@ -28,5 +28,5 @@ def getAllImages(input=None):
         except KeyError: 
             # puede ocurrir que no todos los objetos tenga la info. completa, en ese caso descartamos dicho objeto y seguimos con el siguiente en la próxima iteración.
             pass
-
+            
     return json_collection
