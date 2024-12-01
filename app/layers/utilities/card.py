@@ -5,12 +5,11 @@ class Card:
         self.status = status
         self.last_location = last_location
         self.first_seen = first_seen
-
         self.user = user
         self.id = id
 
     def __str__(self):
-        return f'IMG URL: {self.title}, name: {self.name}, status: {self.status}, última ubicación: {self.last_location}, primera vez visto: {self.first_seen}, Usuario: {self.user}, Id: {self.id}'
+        return f'IMG URL: {self.url}, name: {self.name}, status: {self.status}, última ubicación: {self.last_location}, primera vez visto: {self.first_seen}, Usuario: {self.user}, Id: {self.id}'
     
     # método equals.
     def __eq__(self, other):
