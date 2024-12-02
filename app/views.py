@@ -7,7 +7,7 @@ from django.contrib.auth import logout
 from .layers.transport import transport
 
 def index_page(request):
-    return render(request, 'index.html')
+    return render(request, 'registration/login.html')
 
 # esta función obtiene 2 listados que corresponden a las imágenes de la API y los favoritos del usuario, y los usa para dibujar el correspondiente template.
 # si el opcional de favoritos no está desarrollado, devuelve un listado vacío.
@@ -45,4 +45,4 @@ def deleteFavourite(request):
 
 @login_required
 def exit(request):
-    pass
+    return redirect('/accounts/logout')
