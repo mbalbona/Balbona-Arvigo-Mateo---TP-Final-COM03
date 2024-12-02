@@ -2,27 +2,6 @@
 <main>
     <h1 class="text-center">Buscador Rick & Morty</h1>
 
-    <div class="d-flex justify-content-end" style="margin-bottom: 1%; margin-right: 2rem;">
-        <!-- Selector de página -->
-        <nav aria-label="...">
-            <ul class="pagination">
-                <li class="page-item disabled">
-                    <a class="page-link">⬅️</a>
-                </li>
-                <li class="page-item active" aria-current="page">
-                    <a class="page-link" href="#">1</a>
-                </li>
-                <li class="page-item">
-                    <a class="page-link" href="#">2</a>
-                </li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item">
-                    <a class="page-link" href="#">➡️</a>
-                </li>
-            </ul>
-        </nav>
-    </div>
-
     <div class="d-flex justify-content-center" style="margin-bottom: 1%">
         <!-- Buscador del sitio -->
         <form class="d-flex" action="{% url 'buscar' %}" method="POST">
@@ -40,7 +19,7 @@
             <div class="card mb-3 ms-5 {% if img.status == 'Alive' %}card-alive{% elif img.status == 'Dead' %}card-dead{% else %}card-unknown{% endif %}" style="max-width: 540px;">
                 <div class="row g-0">
                     <div class="col-md-4">
-                        <img src="{{ img.url }}" class="card-img-top" alt="imagen">
+                        <img src="{{ img.url }}" class="card-img-center" alt="imagen"">
                     </div>
 
                     <div class="col-md-8">
